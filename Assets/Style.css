@@ -28,6 +28,7 @@
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--primary-color);
+  
 }
 
 .section__description {
@@ -136,6 +137,7 @@ nav {
   grid-area: 1/1/2/2;
   display: flex;
   align-items: center;
+  padding: 20px;
 }
 
 .header__content > div{
@@ -176,15 +178,27 @@ nav {
 .deals__card p{
   color: var(--text-light);
 }
-.about__header{
+.about__header {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 50px;
+  text-align: justify;
 }
-.about__header .section__description{
+
+.about__header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.about__header .section__description {
   max-width: 600px;
 }
-.about__btn{
+
+.about__btn {
   width: fit-content;
   padding: 0.75rem 1.5rem;
   outline: none;
@@ -201,6 +215,7 @@ nav {
   margin-top: 2rem;
   display: grid;
   gap: 2rem;
+  padding: 50px;
 }
 .about__image{
   overflow: hidden;
@@ -301,6 +316,7 @@ nav {
   font-size: 1.2rem;
   color: var(--text-light);
   font-style: italic;
+  text-align: justify;
  
 }
 
@@ -317,7 +333,95 @@ nav {
   color: var(--text-light);
  
 }
+.swiper-button-next, .swiper-button-prev {
+  color: #333; /* Change the color as needed */
+  width: 30px;
+  height: 30px;
+}
 
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: #000; /* Hover effect */
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 20px; /* Adjust the size of the arrow icons */
+}
+.footer{
+  background-color: var(--primary-color);
+  padding: 30px;
+}
+
+.footer__container{
+  display: grid;
+  gap: 4rem 2rem;
+}
+.footer__logo{
+  margin-bottom: 1rem;
+}
+.footer__logo .logo{
+  color: var(--white);
+}
+
+.footer__col p{
+  margin-bottom: 2rem;
+  color: var(--extra-light);
+  opacity: 0.8;
+}
+.footer__socials{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__socials a{
+  color: var(--white);
+}
+
+.footer__socials a:hover {
+  color: #007bff; /* Change to your desired hover color */
+}
+
+/* Specific hover colors for each icon */
+.footer__socials a:hover .ri-facebook-fill {
+  color: #4267B2; /* Facebook blue */
+}
+
+.footer__socials a:hover .ri-twitter-fill {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.footer__socials a:hover .ri-linkedin-fill {
+  color: #0077B5; /* LinkedIn blue */
+}
+
+.footer__socials a:hover .ri-pinterest-fill {
+  color: #E60023; /* Pinterest red */
+}
+
+.footer__col h4{
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--white);
+}
+.footer__links{
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__links a{
+  color: var(--extra-light);
+  opacity: 0.8;
+}
+.footer__links a:hover{
+  opacity: 1;
+}
+.footer__bar{
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--extra-light);
+  opacity: 0.8;
+  text-align: center;
+}
 
 @media (min-width : 540px) {
   .deals__container{
@@ -326,7 +430,11 @@ nav {
   .about__grid{
     grid-template-columns: repeat(2, 1fr);
   }
+  
   .product__grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__container{
     grid-template-columns: repeat(2, 1fr);
   }
   
@@ -415,9 +523,12 @@ nav {
   }
   .about__header{
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  text-align: center;
+
+    justify-content: center;
+
   }
+  
   .about__content{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -431,6 +542,9 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     text-align: left;
     align-items: center;
+  }
+  .footer__container{
+    grid-template-columns: repeat(4, 1fr);
   }
 
 }

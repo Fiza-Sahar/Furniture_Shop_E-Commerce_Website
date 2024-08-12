@@ -62,4 +62,8 @@ ScrollReveal().reveal(".about__card", {
 });
 const swiper = new Swiper(".swiper", {
   loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 })
